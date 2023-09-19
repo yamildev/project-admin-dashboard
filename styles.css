@@ -3,22 +3,19 @@
 :root {
     font-size: 16px;
 }
-#header img{
-    width: 50px;
-}
+
 * {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    outline: 1px solid red;
 
 }
 .grid-container {
     display: grid;
     height: 100vh;
-    grid-template: 3fr 10fr / 0.8fr 4.5fr;
+    grid-template: 3fr 1fr 10fr / 0.9fr 4.5fr;
 }
  
 #header-container {
@@ -26,7 +23,12 @@
 }
 #header {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-template: 1fr 1fr / 2fr 1fr;
+}
+#header .notifications-panel img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
 }
 #header > .search-container {
     display: flex;
@@ -35,10 +37,45 @@
     gap: 10px;
     padding-left: 30px;
 }
+#header > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#usr_name {
+    font-weight: bold;
+    font-size: .8rem;
+}
+.greetings {
+    font-size: 1.3rem;
+    padding-left: 30px;
+    font-weight: bold;
+}
+.greetings img {
+    width: 50px;
+    border-radius: 100%;
+}
+.notifications-panel, .buttons {
+    padding-right: 60px;
+    justify-content: right;
+    text-align: right;
+}
+.buttons > button {
+    background-color: #1992d4;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    min-height: 30px;
+    min-width: 75px;
+    border-radius: 60px;
+}
+.greetings p {
+    text-align: left;
+}
 #header > .search-container > input {
     border-radius: 30px;
     border: none;
-    height: 20px;
+    height: 23px;
     background-color: #e2e8f0;
     flex: 1;
     max-width: 90%;
@@ -48,14 +85,29 @@
 }
 #main-container {
     grid-area: 2 / 2 / -1 / -1;
-
+    background-color: #e5f2fa;
     display: grid;
-    gap: 10px;
+    padding: 20px 15px 20px 15px;
     grid-template: 1fr / 2.5fr 1fr;
 } 
 #main-left{
     display: grid;
-
+}
+#main-left p, h4 {
+    text-align: left;
+}
+#main-left .icons {
+    display: flex;
+    gap: 12px;
+    margin-right: 30px;
+    justify-content: right;
+}
+.box, .main-left icons {
+    border-radius: 2%;
+    border-left: 8px solid yellow;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff
 }
 #dashboard-header {
     margin-bottom: 30px;
@@ -65,6 +117,8 @@
     padding-top: 10px;
 }
 #navigation {
+    font-size: 1.2rem;
+    padding-left: 10    px;
     font-weight: 700;
     color: #e5f2fa;
     background-color: #1992d4;
@@ -93,7 +147,7 @@
     text-align: left;
 
 }
-.communities{
+.communities {
     margin-bottom: 35px;
 }
 
@@ -109,9 +163,9 @@
 
 #aside {
     display: grid;
-
     grid-template: 1fr 1fr / 1fr;
 }
+
 
 
 
